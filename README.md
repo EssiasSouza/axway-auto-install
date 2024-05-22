@@ -41,5 +41,7 @@ VALIDAÇÕES
 - Abra o navegador e acesse a console de configuração para validar o serviço. Você também pode validar se o serviço subiu analisando o log com o segguinte comando.
 
 tail -f /home/pi/Axway/Activator/logs/server.log
+
 ou
+
 ediLog
