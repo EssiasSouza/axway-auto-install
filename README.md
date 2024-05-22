@@ -14,7 +14,7 @@ A aplicação depende do arquivo de instalação do Axway Activator e da licenç
 
 Para um bom funcionamento deve-se notar os seguintes pontos.
 
-1 - Na pasta /home/pi/ deve conter os seguintes arquivos.
+1 - Na pasta /home/pi/ deve conter os seguintes arquivos:
   - Activator_6.1_Install_linux-x86-64_BN6.sh
   - License.xml
 
@@ -22,13 +22,16 @@ Para um bom funcionamento deve-se notar os seguintes pontos.
 
 ### EXECUÇÃO
 
-- No terminal rode os seguintes comandos
+No terminal rode os seguintes comandos
 
 sudo ls -l # Com essa linha você ira elevar para super usuário seu login
 
 **Este comando a seguir irá rodar em segundo plano e você poderá fechar o terminal que o comando estará rodando em segundo plano.**
+
 sudo nohup /suporte/axwayautorecovery/robot/autoInstall_Activator6.1.sh > /suporte/axwayautorecovery/logs/autoInstall_Activator6.1$(date +%Y%m).log 2>&1 & disown
+
 Ou para reinstalar:
+
 sudo nohup /suporte/axwayautorecovery/robot/reinstall_Axway.sh > /suporte/axwayautorecovery/logs/reinstall_Axway$(date +%Y%m).log 2>&1 & disown
 
 VALIDAÇÕES
