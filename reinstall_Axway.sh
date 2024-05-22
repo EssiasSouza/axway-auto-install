@@ -6,11 +6,11 @@
 # Parte do script foi gerado diretamente pelo autoExcept no Linux.
 
 autoStart=/usr/bin/autoStartAbastece.sh
-LOG_1='/home/pi/instalador_Axway/Instalacao_manual'$(date +%Y%m)'.log'
+LOG_1='/suporte/axwayautorecovery/logs/reinstall_Axway'$(date +%Y%m)'.log'
 
 sudo cp /suporte/axwayautorecovery/Activator6.1/Activator_6.1_Install_linux-x86-64_BN6.sh /home/pi/
 sudo chmod 777 /home/pi/Activator_6.1_Install_linux-x86-64_BN6.sh
-sudo cp /home/pi/instalador_Axway/license.xml /home/pi/
+sudo cp /suporte/axwayautorecovery/Activator6.1/license.xml /home/pi/
 
 # ===== Comentando o EDI do autoStart =====
 echo '-- Validando se o EDI está comentado no autoStartAbastece e comentando.' >> $LOG_1
@@ -923,6 +923,7 @@ send -- "\r"
 expect eof
 EOF
 
+cd /home/pi
 chown pi:pi /home/pi/autoInstall_Activator6.1.sh
 chmod 777 /home/pi/autoInstall_Activator6.1.sh
 sudo /home/pi/autoInstall_Activator6.1.sh &
